@@ -11,6 +11,10 @@ hr {
   margin-top: 0;
 }
 
+.nav {
+  --bs-nav-link-hover-color: red;
+}
+
 .nav-link {
   font-size: 18px;
 }

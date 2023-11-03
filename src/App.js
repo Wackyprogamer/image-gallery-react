@@ -24,21 +24,27 @@ function App() {
       <section className='photoGallery'>
 
         <div className='row'>
-          <p>Placeholder Text</p>
+          <img></img>
+          <img></img>
+          <img></img>
         </div>
 
         <div className='row'>
-          <p>Placeholder Text</p>
+          <img></img>
+          <img></img>
+          <img></img>
         </div>
 
         <div className='row'>
-          <p>Placeholder Text</p>
+          <img></img>
+          <img></img>
+          <img></img>
         </div>
 
       </section>
 
       <footer>
-      <ul className='nav nav-underline justify-content-center'>
+        <ul className='nav nav-underline justify-content-center'>
           <li className='nav-item'>
             <a className='nav-link' href='#'>Nature</a>
           </li>
