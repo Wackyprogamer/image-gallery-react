@@ -24,7 +24,7 @@ function App() {
       <section className='photoGallery'>
 
         <div className='row'>
-          <img src='images-temp\22b-subaru.jpg' alt='Photo of a 22b-Subaru impreza' className='img-thumbnail col-4'></img>
+          <img src='' alt='Photo of a 22b-Subaru impreza' className='img-thumbnail col-4'></img>
           <img src='images-temp\7900xt-gpu.jpg' alt='Photo of a 7900xt reference GPU from AMD' className='img-thumbnail col-4'></img>
           <img src='' className='img-thumbnail col-4'></img>
         </div>

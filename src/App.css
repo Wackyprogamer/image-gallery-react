@@ -2,6 +2,10 @@ body {
   background-color: white;
 }
 
+header {
+  background-color: #027BFF;
+}
+
 li {
   margin: 3% 7%;
 }
@@ -17,6 +21,12 @@ hr {
 
 .nav-link {
   font-size: 18px;
+  color: black;
+  font-weight: bold;
+}
+
+footer {
+background-color: #027BFF;
 }
 
 #createrMark {
