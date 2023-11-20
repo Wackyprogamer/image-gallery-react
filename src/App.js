@@ -1,4 +1,9 @@
-import './App.css';
+import './App.css'
+import subaru from "./images/22b-subaru.jpg"
+import xt from './images/7900xt-gpu.jpg'
+import turtle from './images/turtle-little.jpg'
+import husky from './images/husky-nature.jpg'
+
 
 function App() {
   return (
@@ -24,13 +29,13 @@ function App() {
       <section className='photoGallery'>
 
         <div className='row'>
-          <img src='' alt='Photo of a 22b-Subaru impreza' className='img-thumbnail col-4'></img>
-          <img src='images-temp\7900xt-gpu.jpg' alt='Photo of a 7900xt reference GPU from AMD' className='img-thumbnail col-4'></img>
-          <img src='' className='img-thumbnail col-4'></img>
+          <img src={subaru} alt='Photo of a 22b-Subaru impreza' className='img-thumbnail col-4'></img>
+          <img src={xt} alt='Photo of a 7900xt reference GPU from AMD' className='img-thumbnail col-4'></img>
+          <img src={turtle} alt='Photo of a small turtle' className='img-thumbnail col-4'></img>
         </div>
 
         <div className='row'>
-          <img src='' className='img-thumbnail col-4'></img>
+          <img src={husky} alt="image of a husky" className='img-thumbnail col-4'></img>
           <img src='' className='img-thumbnail col-4'></img>
           <img src='' className='img-thumbnail col-4'></img>
         </div>
