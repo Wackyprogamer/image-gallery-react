@@ -1,29 +1,47 @@
 import './App.css'
+import { useState, useEffect } from 'react'
+//import { imageApi } from './components/unsplashGallery'
 import subaru from "./images/22b-subaru.jpg"
 import xt from './images/7900xt-gpu.jpg'
 import turtle from './images/turtle-little.jpg'
 import husky from './images/husky-nature.jpg'
 
+//<https://api.unsplash.com/search/photos?page=1&query=office>
 
 function App() {
+
+  const [category, setCategory] = useState("");
+
+  const handleCategoryClick = (category) => {
+    setCategory(category);
+
+    //call api here with the selected category
+  };
+
+
+
+
   return (
     <div className="App">
+
       <header className="App-header">
+
         <ul className='nav nav-underline justify-content-center'>
-          <li className='nav-item'>
-            <a className='nav-link' href='#'>Nature</a>
-          </li>
-          <li className='nav-item'>
-            <a className='nav-link' href='#'>Video Games</a>
-          </li>
-          <li className='nav-item'>
-            <a className='nav-link' href='#'>Vehicles</a>
-          </li>
-          <li className='nav-item'>
-            <a className='nav-link' href='#'>Appearal</a>
-          </li>
+
+        <button className='nav-link' onClick={() => handleCategoryClick('Nature')}>Nature</button>
+
+        <button className='nav-link' onClick={() => handleCategoryClick('Video Games')}>Video Games</button>
+
+        <button className='nav-link' onClick={() => handleCategoryClick('Vehicles')}>Vehicles</button>
+
+        <button className='nav-link' onClick={() => handleCategoryClick('Apparel')}>Apparel</button>
+
         </ul>
+
         <hr></hr>
+
+        <p style={{textAlign: "center", paddingBottom: 20}}>Selected Category: {category}</p>
+
       </header>
 
       <section className='photoGallery'>
@@ -51,18 +69,15 @@ function App() {
       <footer>
         <hr></hr>
         <ul className='nav nav-underline justify-content-center'>
-          <li className='nav-item'>
-            <a className='nav-link' href='#'>Nature</a>
-          </li>
-          <li className='nav-item'>
-            <a className='nav-link' href='#'>Video Games</a>
-          </li>
-          <li className='nav-item'>
-            <a className='nav-link' href='#'>Vehicles</a>
-          </li>
-          <li className='nav-item'>
-            <a className='nav-link' href='#'>Appearal</a>
-          </li>
+
+         <button className='nav-link' onClick={() => handleCategoryClick('Nature')}>Nature</button>
+
+        <button className='nav-link' onClick={() => handleCategoryClick('Video Games')}>Video Games</button>
+
+        <button className='nav-link' onClick={() => handleCategoryClick('Vehicles')}>Vehicles</button>
+
+        <button className='nav-link' onClick={() => handleCategoryClick('Apparel')}>Apparel</button>
+
         </ul>
         <p id='createrMark'>Project Created With React -- Created by Sergio Castillo -- For a Mountainland Technical School Project</p>
       </footer>
