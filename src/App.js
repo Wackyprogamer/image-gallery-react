@@ -12,6 +12,8 @@ function App() {
 
   const [category, setCategory] = useState("");
 
+  const [res, setRes] = useState([]);
+
   const handleCategoryClick = (category) => {
     setCategory(category);
 
@@ -28,19 +30,19 @@ function App() {
 
         <ul className='nav nav-underline justify-content-center'>
 
-        <button className='nav-link' onClick={() => handleCategoryClick('Nature')}>Nature</button>
+        <li><button type='button' className='nav-link' onClick={() => handleCategoryClick('Nature')}>Nature</button></li>
 
-        <button className='nav-link' onClick={() => handleCategoryClick('Video Games')}>Video Games</button>
+        <li><button type='button' className='nav-link' onClick={() => handleCategoryClick('Video Games')}>Video Games</button></li>
 
-        <button className='nav-link' onClick={() => handleCategoryClick('Vehicles')}>Vehicles</button>
+        <li><button type='button' className='nav-link' onClick={() => handleCategoryClick('Vehicles')}>Vehicles</button></li>
 
-        <button className='nav-link' onClick={() => handleCategoryClick('Apparel')}>Apparel</button>
+        <li><button type='button' className='nav-link' onClick={() => handleCategoryClick('Apparel')}>Apparel</button></li>
 
         </ul>
 
         <hr></hr>
 
-        <p style={{textAlign: "center", paddingBottom: 20}}>Selected Category: {category}</p>
+        <p value={category} style={{textAlign: "center", paddingBottom: 20}}>Selected Category: {category}</p>
 
       </header>
 
@@ -70,13 +72,13 @@ function App() {
         <hr></hr>
         <ul className='nav nav-underline justify-content-center'>
 
-         <button className='nav-link' onClick={() => handleCategoryClick('Nature')}>Nature</button>
+         <li><button type='button' className='nav-link' onClick={() => handleCategoryClick('Nature')}>Nature</button></li>
 
-        <button className='nav-link' onClick={() => handleCategoryClick('Video Games')}>Video Games</button>
+        <li><button type='button' className='nav-link' onClick={() => handleCategoryClick('Video Games')}>Video Games</button></li>
 
-        <button className='nav-link' onClick={() => handleCategoryClick('Vehicles')}>Vehicles</button>
+        <li><button type='button' className='nav-link' onClick={() => handleCategoryClick('Vehicles')}>Vehicles</button></li>
 
-        <button className='nav-link' onClick={() => handleCategoryClick('Apparel')}>Apparel</button>
+        <li><button type='button' className='nav-link' onClick={() => handleCategoryClick('Apparel')}>Apparel</button></li>
 
         </ul>
         <p id='createrMark'>Project Created With React -- Created by Sergio Castillo -- For a Mountainland Technical School Project</p>
