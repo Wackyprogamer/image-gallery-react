@@ -6,17 +6,39 @@ import xt from './images/7900xt-gpu.jpg'
 import turtle from './images/turtle-little.jpg'
 import husky from './images/husky-nature.jpg'
 
+
 //<https://api.unsplash.com/search/photos?page=1&query=office>
 
 function App() {
+
+  const Access_Key = PHAr0p_38mFYwUiEOdIVvNubzFqEhjkUvUrZCZmoPqg;
 
   const [category, setCategory] = useState("");
 
   const [res, setRes] = useState([]);
 
+  const fetchRequest = async () => {
+    const data = await fetch(
+      `https://api.unsplash.com/search/photos?page=1&query=${category}&client_id=${Access_Key}`
+    );
+    const dataJ = await data.json();
+    const result = dataJ.results;
+    console.log(result)
+    setRes(result);
+  };
+
+  useEffect(() => {
+    fetchRequest();
+  }, []);
+
+  const Submit = () => {
+    fetchRequest();
+    setCategory("");
+  };
+
   const handleCategoryClick = (category) => {
     setCategory(category);
-
+    fetchRequest();
     //call api here with the selected category
   };
 
@@ -42,31 +64,25 @@ function App() {
 
         <hr></hr>
 
-        <p value={category} style={{textAlign: "center", paddingBottom: 20}}>Selected Category: {category}</p>
+        <p value={category} onChange={(e) => setCategory(e.target.value)} style={{textAlign: "center", paddingBottom: 20}}>Selected Category: {category}</p>
 
       </header>
 
       <section className='photoGallery'>
 
-        <div className='row'>
-          <img src={subaru} alt='Photo of a 22b-Subaru impreza' className='img-thumbnail col-4'></img>
-          <img src={xt} alt='Photo of a 7900xt reference GPU from AMD' className='img-thumbnail col-4'></img>
-          <img src={turtle} alt='Photo of a small turtle' className='img-thumbnail col-4'></img>
-        </div>
+        {res.map((val) => {
+          return (
+            <>
+            <img 
+              className='col-3 img-fluid img-thumbnail'
+              src={val.urls.small}
+              alt='val.alt_description'
+              />
+            </>
+          );
+        })}
 
-        <div className='row'>
-          <img src={husky} alt="image of a husky" className='img-thumbnail col-4'></img>
-          <img src='' className='img-thumbnail col-4'></img>
-          <img src='' className='img-thumbnail col-4'></img>
-        </div>
-
-        <div className='row'>
-          <img src='' className='img-thumbnail col-4'></img>
-          <img src='' className='img-thumbnail col-4'></img>
-          <img src='' className='img-thumbnail col-4'></img>
-        </div>
-
-      </section>
+      </section>;
 
       <footer>
         <hr></hr>
