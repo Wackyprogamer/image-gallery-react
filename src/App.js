@@ -1,44 +1,27 @@
 import './App.css'
-import { useState, useEffect } from 'react'
-//import { imageApi } from './components/unsplashGallery'
-import subaru from "./images/22b-subaru.jpg"
-import xt from './images/7900xt-gpu.jpg'
-import turtle from './images/turtle-little.jpg'
-import husky from './images/husky-nature.jpg'
+import { createContext, useState } from 'react'
+import useAxios from './hooks/useAxios';
 
 
-//<https://api.unsplash.com/search/photos?page=1&query=office>
+//Created Context
+export const ImageContext = createContext();
+
 
 function App() {
 
-  const Access_Key = PHAr0p_38mFYwUiEOdIVvNubzFqEhjkUvUrZCZmoPqg;
+  const { response, isLoading, error, fetchData } = useAxios(`/search
+  /photos?page=1&query=office&client_id=${process.env.
+    REACT_APP_ACCESS_KEY}`);
+
+  console.log(response);
 
   const [category, setCategory] = useState("");
 
   const [res, setRes] = useState([]);
 
-  const fetchRequest = async () => {
-    const data = await fetch(
-      `https://api.unsplash.com/search/photos?page=1&query=${category}&client_id=${Access_Key}`
-    );
-    const dataJ = await data.json();
-    const result = dataJ.results;
-    console.log(result)
-    setRes(result);
-  };
-
-  useEffect(() => {
-    fetchRequest();
-  }, []);
-
-  const Submit = () => {
-    fetchRequest();
-    setCategory("");
-  };
 
   const handleCategoryClick = (category) => {
     setCategory(category);
-    fetchRequest();
     //call api here with the selected category
   };
 
@@ -70,17 +53,7 @@ function App() {
 
       <section className='photoGallery'>
 
-        {res.map((val) => {
-          return (
-            <>
-            <img 
-              className='col-3 img-fluid img-thumbnail'
-              src={val.urls.small}
-              alt='val.alt_description'
-              />
-            </>
-          );
-        })}
+        
 
       </section>;
 
