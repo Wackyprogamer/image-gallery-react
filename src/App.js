@@ -1,6 +1,7 @@
 import './App.css'
 import BannerNav from './components/Banner';
 import FooterNav from './components/Footer';
+import Images from './components/images';
 import { createContext, useState } from 'react'
 import useAxios from './hooks/useAxios';
 
@@ -13,14 +14,11 @@ function App() {
 
   const { response, isLoading, error, fetchData } = useAxios(`/search
   /photos?page=1&query=office&client_id=${process.env.
-    REACT_APP_ACCESS_KEY}`);
+      REACT_APP_ACCESS_KEY}`);
 
-  console.log(response);
+    
 
   const [category, setCategory] = useState("");
-
-  const [res, setRes] = useState([]);
-
 
   const handleCategoryClick = (category) => {
     setCategory(category);
@@ -28,18 +26,30 @@ function App() {
   };
 
 
-
+  const value = {
+    response,
+    isLoading,
+    error,
+    fetchData
+  }
 
   return (
     <div className="App">
 
-      <BannerNav handleCategoryClick={handleCategoryClick} category={category} setCategory={setCategory} />
+      <ImageContext.Provider value={value}>
 
-      <section className='photoGallery'>
+        <BannerNav handleCategoryClick={handleCategoryClick} category={category} setCategory={setCategory} />
 
-      </section>;
+        <section className='photoGallery'>
 
-      <FooterNav handleCategoryClick={handleCategoryClick} category={category} setCategory={setCategory} />
+        </section>
+
+        <Images category={category} />
+
+        <FooterNav handleCategoryClick={handleCategoryClick} category={category} setCategory={setCategory} />
+
+      </ImageContext.Provider>
+
     </div>
   );
 }
