@@ -10,10 +10,10 @@ const useAxios = (param) => {
 
     axios.defaults.baseURL = 'https://api.unsplash.com'
 
-    const fetchData = async (url) => {
+    const fetchData = async (category) => {
         try {
             setIsLoading(true);
-            const res = await axios(url);
+            const res = await axios(`/search/photos?page=1&query=${category}&client_id=${process.env.REACT_APP_ACCESS_KEY}`);
             setResponse(res.data.results);
         } catch (err) {
             setError(err)
