@@ -22,7 +22,6 @@ function App() {
     //call api here with the selected category
   };
 
-
   const value = {
     response,
     isLoading,

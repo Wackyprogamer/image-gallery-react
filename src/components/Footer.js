@@ -18,8 +18,6 @@ const FooterNav = ({handleCategoryClick, category, setCategory}) => {
 
         <hr></hr>
 
-        <p value={category} onChange={(e) => setCategory(e.target.value)} style={{textAlign: "center", paddingBottom: 20}}>Selected Category: {category}</p>
-
       </footer>
     )
 }
