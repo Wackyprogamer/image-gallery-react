@@ -1,6 +1,6 @@
 import React from "react";
 
-const FooterNav = ({handleCategoryClick, category, setCategory}) => {
+const FooterNav = ({handleCategoryClick, category, setCategory}) => { // Samething as Banner.js component -- just a footer and no if statement on this
     return (
         <footer className="App-header">
 
@@ -25,5 +25,5 @@ const FooterNav = ({handleCategoryClick, category, setCategory}) => {
       </footer>
     )
 }
-
+// However the footer has a CreaterMark that I created -- just because
 export default FooterNav
