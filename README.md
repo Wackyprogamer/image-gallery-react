@@ -1,3 +1,14 @@
+This Project was created with npm create-react-app -- This project is a image gallery made with react from the unsplash API -- As
+you noticed I did not include my key on here as per Unsplashes guidelines -- to remedy this download files and create an account on
+Unsplash to grab your own API Key.
+
+Then create an .env file with your access key -- Should be like this -- REACT_APP_ACCESS_KEY= then whatever your key is
+
+Once it works you should be able to choose a category and unsplash api will load 10 images of that category
+
+_________________________________________________________________
+Everything Below is the usual NPM Create-react-Project Stuff --
+_________________________________________________________________
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
