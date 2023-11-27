@@ -10,17 +10,19 @@ const BannerNav = ({handleCategoryClick, category, setCategory}) => {
 
         <li><button type='button' className='nav-link' onClick={() => handleCategoryClick('Nature')}>Nature</button></li>
 
-        <li><button type='button' className='nav-link' onClick={() => handleCategoryClick('Video Games')}>Video Games</button></li>
+        <li><button type='button' className='nav-link' onClick={() => handleCategoryClick('Honda')}>Honda</button></li>
 
-        <li><button type='button' className='nav-link' onClick={() => handleCategoryClick('Vehicles')}>Vehicles</button></li>
+        <li><button type='button' className='nav-link' onClick={() => handleCategoryClick('Playstation')}>Playstation</button></li>
 
         <li><button type='button' className='nav-link' onClick={() => handleCategoryClick('Apparel')}>Apparel</button></li>
+
+        <li><button type='button' className='nav-link' onClick={() => handleCategoryClick('Subaru')}>Subaru's</button></li>
 
         </ul>
 
         <hr></hr>
 
-        <p style={{textAlign: "center"}}>No category selected! Chooe a category to view 10 images of that type!</p>
+        <p style={{textAlign: "center", fontSize: 35}}>No Category selected! Choose A Category To View Ten Images Of That type!</p>
         
 
       </header>
@@ -34,18 +36,17 @@ const BannerNav = ({handleCategoryClick, category, setCategory}) => {
 
         <li><button type='button' className='nav-link' onClick={() => handleCategoryClick('Nature')}>Nature</button></li>
 
-        <li><button type='button' className='nav-link' onClick={() => handleCategoryClick('Video Games')}>Video Games</button></li>
+        <li><button type='button' className='nav-link' onClick={() => handleCategoryClick('Honda')}>Honda</button></li>
 
-        <li><button type='button' className='nav-link' onClick={() => handleCategoryClick('Vehicles')}>Vehicles</button></li>
+        <li><button type='button' className='nav-link' onClick={() => handleCategoryClick('Playstation')}>Playstation</button></li>
 
         <li><button type='button' className='nav-link' onClick={() => handleCategoryClick('Apparel')}>Apparel</button></li>
+
+        <li><button type='button' className='nav-link' onClick={() => handleCategoryClick('Subaru')}>Subaru's</button></li>
 
         </ul>
 
         <hr></hr>
-
-        
-        
 
       </header>
     )
