@@ -85,6 +85,11 @@ h2 {
   font-weight: bold;
 }
 
+#searchButton:hover {
+  color: red;
+  text-decoration: underline;
+}
+
 #inputSearch {
   margin: 10px;
 }
