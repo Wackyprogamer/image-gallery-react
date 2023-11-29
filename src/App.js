@@ -4,7 +4,7 @@ import FooterNav from './components/Footer'; // Imports FooterNav Component
 import Images from './components/images'; // Imports Images Component
 import { createContext, useEffect, useState } from 'react' // import createContext, useEffect & useState React items
 import useAxios from './hooks/useAxios'; // Imported my useAxios Hook
-
+import ButtonSearch from './components/Search';
 
 
 //Created Context
@@ -43,6 +43,8 @@ function App() {
       <ImageContext.Provider value={value}>
 
         <BannerNav handleCategoryClick={handleCategoryClick} category={category} setCategory={setCategory} />
+
+        <ButtonSearch handleCategoryClick={handleCategoryClick}/>
 
         <Images category={category} />
 
