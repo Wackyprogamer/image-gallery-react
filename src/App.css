@@ -8,6 +8,8 @@ header {
 
 li {
   margin: 3% 7%;
+  font-family: 'Ephesis', cursive;
+  
 }
 
 hr {
@@ -63,6 +65,9 @@ img {
   object-fit: fill;
 }
 
+h2 {
+  font-family: 'Ephesis', cursive;
+}
 
 
 
