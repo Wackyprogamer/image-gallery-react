@@ -23,7 +23,7 @@ const BannerNav = ({ handleCategoryClick, category, setCategory }) => { //Grabs 
 
         </ul>
 
-        <p style={{ textAlign: "center", fontSize: 35 }}>No Category selected! Choose A Category To View Ten Images Of That type or Search by keyword!</p>
+        <p style={{ textAlign: "center", fontSize: 35}}>No Category selected! Choose A Category To View Ten Images Of That type or Search by keyword!</p>
 
 
       </header>
