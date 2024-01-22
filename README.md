@@ -99,3 +99,51 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 # docker run -p 3000:3000 -d image-gallery-react
 
 # To view website Run -- http:localhost://3000
+
+
+
+--------------------------------------------------------------
+
+# Docker Stack Commands
+
+# Create docker-compose-yaml file
+
+# create layout like so 
+
+# version: "3.8"
+
+# services:
+  # myImageGallery:
+  #  image: image-gallery-react:latest
+  #  ports:
+  #    - "3000:3000"
+  #  deploy:
+  #    replicas: 3
+
+  # myImageGallery2:
+  #  image: image-gallery-react:latest
+  #  ports:
+  #    - "3001:3000"
+
+  #  deploy:
+  #    replicas: 2
+
+
+
+  # Run docker stack deploy -c docker-compose.yaml myImageGallery
+
+  # to list the stacks that are running -- docker stack ls
+
+  # list the history / state of the stack -- docker stack ps myImageGallery
+
+  # list the services that are running in the stack -- docker stack services myImageGallery
+
+  # to list running containers -- docker ps
+
+  # stop running container -- docker stop <container_id> #Grab this from docker ps
+
+  # to remove the stack (by Name) -- all the containers will be stopped and removed -- docker stack rm myImageGallery
+
+# docker stack services myImageGallery to list services
+
+  # scaling out -- docker service scale myImageGallery_myImageGallery=6

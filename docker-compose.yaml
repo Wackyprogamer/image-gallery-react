@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  myImageGallery:
+    image: image-gallery-react:latest
+    ports:
+      - "3000:3000"
+    deploy:
+      replicas: 3
+
+  myImageGallery2:
+    image: image-gallery-react:latest
+    ports:
+      - "3001:3000"
+
+    deploy:
+      replicas: 2
